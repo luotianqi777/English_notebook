@@ -2,10 +2,14 @@
 \usepackage{ctex}
 \usepackage{ulem}
 \usepackage{amsthm}
-\usepackage[left=1.25in,right=1.25in,top=1in,bottom=1in]{geometry}
+\usepackage{longtable}
+\usepackage{xifthen}
+\usepackage{diagbox}
+\usepackage[left=1in,right=1.25in,top=1in,bottom=1in]{geometry}
 \newtheorem{example}{Example}[section]
+\newtheorem{subexample}{Example}[subsection]
 \newtheorem{definition}{Definition}[section]
-\newcommand{\bl}[1]{\uline{\emph{#1}}}
+\newcommand{\bl}[2][]{\uline{\emph{#2}\ifthenelse{\isempty{#1}}{}{(#1)}}}
 
 \title{英语笔记}
 \author{LTQ}
@@ -13,5 +17,9 @@
 
 \begin{document}
 	\maketitle
-	\input{1.tex}
+	\input{定语.tex}
+	\input{状语.tex}
+	\input{动词.tex}
+	\input{谓语.tex}
+	\input{tabel.tex}
 \end{document}
